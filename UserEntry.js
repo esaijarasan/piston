@@ -55,18 +55,20 @@ export default class UserEntry extends Component{
                     </Toolbar>
                 </AppBar>
             </div>
-            <Paper elevation={12}>
+            <Paper elevation={0}>
                 <Card style={style.card} elevation={12}>
                 <CardContent>
                    <card>
                    <Grid container spacing={3}>
-                   <Grid item xs={3}>
-<img src="https://sunriseautoservice.lk/images/slide/4.jpg" height="220" width="200"></img>
-</Grid>
+                   
 
 <Grid item xs={3}>
  <img src="https://image.shutterstock.com/image-photo/repairing-engine-service-station-car-260nw-599113688.jpg" height="220" width="200" ></img>  
- </Grid>                        
+ </Grid>  
+
+ <Grid item xs={3}>
+<img src="https://pp.netclipart.com/pp/s/28-285798_car-graphics-vector-cleaning-wash-download-free-image.png"height="220" width="200" ></img>
+</Grid>                      
 
  <Grid item xs={3}>
 <img src="https://wallpaperaccess.com/full/1513452.jpg" height="220" 
@@ -75,15 +77,13 @@ width="200"
 </Grid>
 
                         
-<Grid item xs={3}>
-<img src="https://pp.netclipart.com/pp/s/28-285798_car-graphics-vector-cleaning-wash-download-free-image.png"height="220" width="200" ></img>
-</Grid>
+
 
 <Grid item xs={3}>
-<Button variant="contained" color="primary">
-Vehicle Accessories
-</Button>
+<img src="https://sunriseautoservice.lk/images/slide/4.jpg" height="220" width="200"></img>
 </Grid>
+
+
 
 <Grid item xs={3}>
 <Button variant="contained" color="primary">
@@ -93,15 +93,22 @@ Vehicle Accessories
 
 <Grid item xs={3}>
 <Button variant="contained" color="primary">
-  Hire/Rent
+  Vehicle service
 </Button>
 </Grid>
 
 <Grid item xs={3}>
 <Button variant="contained" color="primary">
-  Vehicle service
+  Hire/Rent
 </Button>
+</Grid>
 
+
+
+<Grid item xs={3}>
+<Button variant="contained" color="primary">
+Vehicle Accessories
+</Button>
 </Grid>
                        </Grid>
                    </card>
