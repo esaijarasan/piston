@@ -43,9 +43,10 @@ export default class UserEntry extends Component{
                         </Typography>
                         
                         <Grid item xs={10}>
-                            
-                       
+                        <Button color="inherit">HOME</Button>
+
                         </Grid>
+
                         <Grid item xs={1}>
                         <Button color="inherit">Profile</Button>
                         </Grid>
@@ -92,7 +93,7 @@ width="200"
 </Grid>
 
 <Grid item xs={3}>
-<Button variant="contained" color="primary">
+<Button variant="contained" color="primary" onClick="">
   Vehicle service
 </Button>
 </Grid>
@@ -117,7 +118,8 @@ Vehicle Accessories
                 </Card>
             </Paper>
             <Footer/>
-            </div>   
+            </div> 
+              
         )   
     }
 }
