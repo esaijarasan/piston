@@ -24,9 +24,9 @@ const style = {
 
     card : {
         backgroundColor:"white",
-        height:320,
+        height:400,
         width:1000,
-        marginTop:100,
+        marginTop:50,
         marginLeft:100,},
     
     line: {
@@ -115,11 +115,12 @@ export default function ChoosePrb(){
 
                    <FormControl component="fieldset">
       <FormLabel component="legend">choose Your Problem</FormLabel>
+      
       <RadioGroup aria-label= "choose your problem" name="gender1" value={value} onChange={handleChange}>
         <FormControlLabel value="Need Fuel" control={<Radio />} label="Need Fuel" />
         <FormControlLabel value="Flat Tire" control={<Radio />} label="Flat Tire" />
         <FormControlLabel value="others" control={<Radio />} label="Others" />
-        <FormControlLabel value="I Havent understand"  control={<Radio />} label="I Havent understand" />
+        <FormControlLabel value="I Havent understand Problem"  control={<Radio />} label="I Havent understand problem" />
       </RadioGroup>
     </FormControl>
     <br/>

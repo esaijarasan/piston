@@ -64,15 +64,15 @@ export default class Hire extends Component{
                    
 
 <Grid item xs={3}>
- <img src="https://wallpapersite.com/images/wallpapers/boneshaker-79-2880x1800-custom-bike-hd-2285.jpg" height="220" width="200" ></img>  
+ <img src="https://cdn.autoportal.com/bp-v3/img/models/5/1/dio-black.png" height="220" width="200" ></img>  
  </Grid>  
 
  <Grid item xs={3}>
-<img src="https://wonderfulengineering.com/wp-content/uploads/2014/07/Bugatti-Veyron-2013-Sports-Cars-HD-Wallpaper-2.jpg"height="220" width="200" ></img>
+<img src="https://images.financialexpress.com/2020/02/2020-BS6-bajaj-Pulsar-150-Twin-Disc.jpg"height="220" width="200" ></img>
 </Grid>                      
 
  <Grid item xs={3}>
-<img src="https://besthqwallpapers.com/img/original/115580/hyundai-imax-n-drift-bus-4k-minibus-2019-cars-tuning.jpg" height="220" 
+<img src="https://www.wsupercars.com/wallpapers/Honda/2020-Honda-Civic-Si-004-1080.jpg" height="220" 
 width="200"
 ></img>
 </Grid>
@@ -81,26 +81,26 @@ width="200"
 
 
 <Grid item xs={3}>
-<img src="https://www.hdcarwallpapers.com/walls/2016_mercedes_benz_future_bus-wide.jpg" height="220" width="200"></img>
+<img src="https://c4.wallpaperflare.com/wallpaper/640/966/464/2014-concept-honda-modulo-wallpaper-preview.jpg" height="220" width="200"></img>
 </Grid>
 
 
 
 <Grid item xs={3}>
 <Button variant="contained" color="primary">
-  Bikes
+  Dio Bike
 </Button>
 </Grid>
 
 <Grid item xs={3}>
 <Button variant="contained" color="primary" onClick="">
- Cars
+Pulser 150
 </Button>
 </Grid>
 
 <Grid item xs={3}>
 <Button variant="contained" color="primary">
-  mini Bus
+ Honda Civic
 </Button>
 </Grid>
 
@@ -108,7 +108,7 @@ width="200"
 
 <Grid item xs={3}>
 <Button variant="contained" color="primary">
-Bus
+Honda Vezel
 </Button>
 </Grid>
                        </Grid>
