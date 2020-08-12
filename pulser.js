@@ -93,7 +93,7 @@ export default function Pulser (){
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>
-          <h1> Pulser Bike details</h1>
+          <h1> Pulsar Bike details</h1>
           <ol>
               <li>
               Engine Type:	4-Stroke, 2-Valve, Twin Spark BSVI Compliant DTS-i FI Engine

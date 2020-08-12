@@ -94,7 +94,7 @@ width="200"
 
 <Grid item xs={3}>
 <Button variant="contained" color="primary" onClick="">
-Pulser 150
+Pulsar 150
 </Button>
 </Grid>
 
