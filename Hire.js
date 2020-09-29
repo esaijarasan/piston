@@ -117,9 +117,9 @@ Honda Vezel
                 </CardContent>
                 </Card>
             </Paper>
-            <Footer/>
+            {/* <Footer/> */}
             </div> 
               
         )   
     }
-}
+  }

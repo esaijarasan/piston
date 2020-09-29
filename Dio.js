@@ -8,43 +8,33 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const style = {
 
-    card : {
-        backgroundColor:"white",
-        height:400,
-        width:250,
-        marginTop:50,
-        marginLeft:100,},
-   
-    line: {
-        height:10,
-        backgroundColor:"black",
-        width:3,
-        marginLeft:240
-    },
-    buttonl: {
-        height:100,
-        width:150,
-        backgroundColor:"lightgreen"
-    },
-    buttonl: {
-        height:100,
-        width:150,
-        backgroundColor:"lightgreen"
-    },
+  
+    
   }
+  const mystyle = {
+    fontFamily: "Arial",
+    backgroundColor:"transparent",
+    color:"black"
+    };
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
     },
     paper: {
-        marginTop:50,
-      padding: theme.spacing(2),
-      textAlign: 'left',
-      color: theme.palette.text.secondary,
-      height:400
+      marginLeft:55,
+      marginTop:10,
+    padding: theme.spacing(1),
+    textAlign: 'left',
+    color: "BLACK",
+    height:480,
+    backgroundColor:"transparent",
+    flexDirection: 'row'
     },
-  }));
+    
+    
+     }));
   
+   
 
 
   
@@ -54,97 +44,91 @@ export default function Dio (){
 
   
         return(
+            <div className="dio">
             <div>
-            <div>
-                <AppBar position="static" style={{backgroundColor:"black"}}>
+            <AppBar position="static" style={mystyle}>
                     <Toolbar>
                     
                         
-                        <Typography variant="h6" style={{backgroundColor:"royalblue", color:"black",}}>
-                            Piston
+                        <Typography variant="h6" >
+                            <img src="https://www.pngitem.com/pimgs/m/120-1201491_download-blank-logo-for-picsart-blank-logo-for.png" style={{width:"80px",height:"70px"}} ></img>
                         </Typography>
                         
-                        <Grid item xs={10}>
-                        <Button color="inherit">HOME</Button>
+                        <Grid item xs={9}>
+                        <Button href="/Home"  variant="contained"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>HOME</Button>
 
                         </Grid>
 
-                        <Grid item xs={1}>
-                        <Button color="inherit">Profile</Button>
+                        <Grid item xs={2}>
+                        <Button  variant="contained"  href="/Profile" style={{backgroundColor:"black",color:"gold",marginLeft:10}}>Profile</Button>
                         </Grid>
-                        <Grid item xs={1}>
-                        <Button color="inherit">Logout</Button>
+                        <Grid item xs={1} >
+                        <Button  variant="contained"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>Logout</Button>
                         </Grid>
                     </Toolbar>
                 </AppBar>
             </div>
             <div className={classes.root}>
-      <Grid container spacing={3}>
-        
-        <Grid item xs={6}>
+   
+          
+     
           <Paper className={classes.paper}>
-
-          <img src="https://cdn.autoportal.com/bp-v3/img/models/5/1/dio-black.png" height="350" width="350" ></img>
-          <br/>
-          <Button  variant="contained"
-        color="primary">book now</Button>
-
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-          <h1> Dio Bike details</h1>
+          <h1> <b>Royal Enfield Bike details</b></h1>
           <ol>
               <li>
-                 Engine CC	:109.2 cc
+                <b> Engine CC	:109.2 cc</b>
               </li>
 
               <li>
-                   Max Power:	8.00 bhp
+              <b> Max Power:	8.00 bhp</b>
               </li>
 
               <li>
-                   Max Torque	:9.00 Nm
+              <b>  Max Torque	:9.00 Nm</b>
               </li>
 
               <li>
-                 Starting Mechanism:	Self / Kick Start
+              <b> Starting Mechanism:	Self / Kick Start</b>
 
               </li> 
 
 
               <li>
-                 Transmission	:Automatic
+              <b> Transmission	:Automatic</b>
 
               </li>
 
               <li>
-                  Fuel Tank Capacity: 5.3 L
+              <b>Fuel Tank Capacity: 5.3 L</b>
               </li>
 
               <li>
-                   Reserve Fuel Capacity: 1 L
+              <b> Reserve Fuel Capacity: 1 L</b>
               </li>
 
               <li>
-                  Mileage: 55 Kmpl
+              <b> Mileage: 55 Kmpl</b>
               </li>
 
               <li>
-                  Battery: 12V 3Ah (MF)
+              <b>Battery: 12V 3Ah (MF)</b>
               </li>
 
 
           </ol>
+          <Button  variant="contained"
+        color="primary"  style={{backgroundColor:"Tomato", color:"black"}}>book now</Button>
+{" "}
+          <Button  variant="contained"
+        color="primary" href="/Rent" style={{backgroundColor:"gold", color:"black"}}>Back</Button>
           
+        
           
           
           </Paper>
-        </Grid>
-        
-      </Grid>
+       
     </div>
-            <Footer/>
+            {/* <Footer/> */}
             </div> 
               
         )   

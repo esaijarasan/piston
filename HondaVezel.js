@@ -32,16 +32,27 @@ const style = {
         backgroundColor:"lightgreen"
     },
   }
+  const mystyle = {
+    fontFamily: "Arial",
+    backgroundColor:"transparent",
+    color:"black"
+    };
+
+
+
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
     },
     paper: {
-        marginTop:50,
-      padding: theme.spacing(2),
-      textAlign: 'left',
-      color: theme.palette.text.secondary,
-      height:400
+      marginLeft:955,
+      marginTop:55,
+    padding: theme.spacing(1),
+    textAlign: 'left',
+    color: "black",
+    height:400,
+    backgroundColor:"transparent",
+    flexDirection: 'row'
     },
   }));
   
@@ -54,44 +65,32 @@ export default function HondaVezel (){
 
   
         return(
+            <div className="hondavezel">
             <div>
-            <div>
-                <AppBar position="static" style={{backgroundColor:"black"}}>
+            <AppBar position="static" style={mystyle}>
                     <Toolbar>
                     
                         
-                        <Typography variant="h6" style={{backgroundColor:"royalblue", color:"black",}}>
-                            Piston
+                        <Typography variant="h6" >
+                            <img src="https://www.pngitem.com/pimgs/m/120-1201491_download-blank-logo-for-picsart-blank-logo-for.png" style={{width:"80px",height:"70px"}} ></img>
                         </Typography>
                         
-                        <Grid item xs={10}>
-                        <Button color="inherit">HOME</Button>
+                        <Grid item xs={9}>
+                        <Button href="/Home"  variant="contained"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>HOME</Button>
 
                         </Grid>
 
-                        <Grid item xs={1}>
-                        <Button color="inherit">Profile</Button>
+                        <Grid item xs={2}>
+                        <Button  variant="contained"  href="/Profile" style={{backgroundColor:"black",color:"gold",marginLeft:10}}>Profile</Button>
                         </Grid>
-                        <Grid item xs={1}>
-                        <Button color="inherit">Logout</Button>
+                        <Grid item xs={1} >
+                        <Button  variant="contained"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>Logout</Button>
                         </Grid>
                     </Toolbar>
                 </AppBar>
             </div>
             <div className={classes.root}>
-      <Grid container spacing={3}>
-        
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-
-          <img src="https://c4.wallpaperflare.com/wallpaper/640/966/464/2014-concept-honda-modulo-wallpaper-preview.jpg" height="350" width="350" ></img>
-          <br/>
-          <Button  variant="contained"
-        color="primary">book now</Button>
-
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
+   
           <Paper className={classes.paper}>
           <h1> Honda Vezel car Details</h1>
           <ol>
@@ -135,15 +134,19 @@ export default function HondaVezel (){
 
 
           </ol>
-          
+          <Button  variant="contained"
+        color="primary" style={{backgroundColor:"tomato",color:"black"}}>book now</Button>
+        {" "}
+          <Button  variant="contained"
+        color="primary" href="/Rent" style={{backgroundColor:"gold",color:"black"}}>Back</Button>
           
           
           </Paper>
-        </Grid>
         
-      </Grid>
+        
+     
     </div>
-            <Footer/>
+            {/* <Footer/> */}
             </div> 
               
         )   

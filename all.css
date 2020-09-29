@@ -1,0 +1,108 @@
+/* register page css */
+.divback{
+    background-size: cover;
+    background-image: url(./sign.jpg);
+    height: 660px;
+    width: auto;
+    margin-top: 0em;
+}
+
+.home{
+    background-size: cover;
+    background-image: url(./homebg.jpg);
+    height: 90vh;
+    width: auto;
+    margin-top: 0em;
+}
+.Rent{
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    height: 90vh;
+    width: auto;
+    margin-top: 0em;
+}
+
+.pulser{
+    background-size: cover;
+    background-image: url("https://i.pinimg.com/originals/fe/8d/2b/fe8d2b10fc2de1b5444a43d8464a6803.jpg");
+    height: 90vh;
+    width: auto;
+    margin-top: 0em;
+}
+.mainhome{
+    background-size: cover;
+    background-image: url(./car1.jpg);
+    height: 660px;
+    width: auto;
+    margin-top: 0em;
+}
+.dio{
+    background-size: cover;
+    background-image: url(./RE.jpg);
+    height: 90vh;
+    width: auto;
+    margin-top: 0em;
+  
+}
+.hondaCivic{
+    background-size: cover;
+    background-image: url(./peter.jpg);
+    height: 90vh;
+    width: auto;
+    margin-top: 0em;
+}
+.hondavezel{
+    background-size: cover;
+    background-image: url(./vezel1.jpg);
+    height: 90vh;
+    width: auto;
+    margin-top: 0em;
+}.chooseprb{ 
+     background-size: cover;
+    background-image: url(./pura.jpg);
+    height: 90vh;
+    width: auto;
+    margin-top: 0em;
+
+
+}
+.addNewservice{ background-size: cover;
+    background-image: url(./car.jpg);
+    height: 600px;
+    width: auto;
+    margin-top: 0em;}
+
+    .love{
+        background-size: cover;
+        background-image: url(./car.jpg);
+        height: 660px;
+        width: auto;
+        margin-top: 0em;
+    color:gold;
+    }
+
+    .Homebg{
+        background-size: cover;
+        background-image: url(./Loginpic.jpg);
+        background-repeat: no-repeat;
+        height: 100vh;
+        position: relative;
+        width: 100vw;
+        margin-top: 0em;
+    }
+    .loginbg{
+        background-size: cover;
+        background-image: url(./Loginpic.jpg);
+        height: 100vh;
+        width: 100vw;
+        margin-top: 0em;
+    }
+    .Register{
+        background-size: cover;
+        background-image: url(./sign.jpg);
+        height: 100%;
+        width: 100vw;
+        margin-top: 0;
+        background-repeat: no-repeat;
+        position: relative;
+    }

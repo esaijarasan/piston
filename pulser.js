@@ -3,46 +3,48 @@ import {AppBar, Button, Typography,Toolbar, IconButton, Grid, Paper, Card, CardC
 import { blue, cyan, red } from '@material-ui/core/colors';
 import Footer from './Footer';
 import { makeStyles } from '@material-ui/core/styles';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardActions from '@material-ui/core/CardActions';
 
 
 
 const style = {
 
-    card : {
-        backgroundColor:"white",
-        height:400,
-        width:250,
-        marginTop:50,
-        marginLeft:100,},
-   
-    line: {
-        height:10,
-        backgroundColor:"black",
-        width:3,
-        marginLeft:240
-    },
-    buttonl: {
-        height:100,
-        width:150,
-        backgroundColor:"lightgreen"
-    },
-    buttonl: {
-        height:100,
-        width:150,
-        backgroundColor:"lightgreen"
-    },
+  Pulser:{
+    marginLeft:130,
+    width:250,
+    height:400,
+  //   backgroundImage:
+  // 'linear-gradient( 166deg, rgb(101,203,240) 50%, rgb(101,203,240) 50%, rgb(101,203,240) 50%)',
+  // backgroundColor:"transparent",
+      
+      // color:"white",
+      borderRadius:50,
   }
+  }
+  const mystyle = {
+    fontFamily: "Arial",
+    backgroundColor:"transparent",
+    color:"black"
+    };
+
+
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
     },
     paper: {
-        marginTop:50,
-      padding: theme.spacing(2),
+      marginLeft:55,
+        marginTop:5,
+      padding: theme.spacing(1),
       textAlign: 'left',
-      color: theme.palette.text.secondary,
-      height:400
+      color: "black",
+      height:400,
+      backgroundColor:"transparent",
+      flexDirection: 'row'
     },
+  
   }));
   
 
@@ -54,46 +56,35 @@ export default function Pulser (){
 
   
         return(
+            <div className="pulser">
             <div>
-            <div>
-                <AppBar position="static" style={{backgroundColor:"black"}}>
+            <AppBar position="static" style={mystyle}>
                     <Toolbar>
                     
                         
-                        <Typography variant="h6" style={{backgroundColor:"royalblue", color:"black",}}>
-                            Piston
+                        <Typography variant="h6" >
+                            <img src="https://www.pngitem.com/pimgs/m/120-1201491_download-blank-logo-for-picsart-blank-logo-for.png" style={{width:"80px",height:"70px"}} ></img>
                         </Typography>
                         
-                        <Grid item xs={10}>
-                        <Button color="inherit">HOME</Button>
+                        <Grid item xs={9}>
+                        <Button href="/Home"  variant="contained"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>HOME</Button>
 
                         </Grid>
 
-                        <Grid item xs={1}>
-                        <Button color="inherit">Profile</Button>
+                        <Grid item xs={2}>
+                        <Button  variant="contained"  href="/Profile"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>Profile</Button>
                         </Grid>
-                        <Grid item xs={1}>
-                        <Button color="inherit">Logout</Button>
+                        <Grid item xs={1} >
+                        <Button  variant="contained"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>Logout</Button>
                         </Grid>
                     </Toolbar>
                 </AppBar>
             </div>
             <div className={classes.root}>
-      <Grid container spacing={3}>
+     
         
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-
-          <img src="https://images.financialexpress.com/2020/02/2020-BS6-bajaj-Pulsar-150-Twin-Disc.jpg" height="350" width="350" ></img>
-          <br/>
-          <Button  variant="contained"
-        color="primary">book now</Button>
-
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-          <h1> Pulsar Bike details</h1>
+        <Paper className={classes.paper}>
+          <h1> Ktm Duke Bike details</h1>
           <ol>
               <li>
               Engine Type:	4-Stroke, 2-Valve, Twin Spark BSVI Compliant DTS-i FI Engine
@@ -133,18 +124,28 @@ export default function Pulser (){
               <li>
               Odometer	Digital
               </li>
-
+              
 
           </ol>
+
+          <Button  variant="contained"
+        color="primary" style={{backgroundColor:"Tomato",color:"blue"}}>book now</Button>
+        {"   "}
+
+          <Button  variant="contained"
+        color="primary" href="/Rent" style={{backgroundColor:"gold" ,color:"blue"}}>Back</Button>
+
           
           
           
           </Paper>
-        </Grid>
+
+
+
+
         
-      </Grid>
     </div>
-            <Footer/>
+            {/* <Footer/> */}
             </div> 
               
         )   
