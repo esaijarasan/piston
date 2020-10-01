@@ -91,10 +91,8 @@ export default class Home extends Component{
       
       if (this.state.loginusername && this.state.loginpassword) {
           // console.log(this.state.loginusername + " " + this.state.loginpassword )
-          this.setState({
-            successful: true,
-            message: "loged in successfully"
-          })
+          this.props.history.push("/MainPage");
+          window.location.reload();
         } else {
           this.setState({
             successful: false,
@@ -185,7 +183,7 @@ export default class Home extends Component{
                 name="Login"
                 style={{marginTop:10,backgroundColor:"gold",marginLeft:80,color:"black"}}
                 type="submit"
-                href="/MainPage"
+                // href="/MainPage"
                 >Login</Button>
 
 {

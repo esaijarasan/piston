@@ -44,7 +44,7 @@ return (
 ? <h1>Time Finished</h1>
 : <h1>Time Remaining: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</h1>
 }
-<Button style={{color:"black",backgroundColor:"red"}}>Cancel</Button>
+<Button href="/GeoLocation" style={{color:"black",backgroundColor:"red"}}>Cancel</Button>
 </Card>
 </div>
 )

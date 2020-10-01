@@ -85,7 +85,7 @@
         background-size: cover;
         background-image: url(./Loginpic.jpg);
         background-repeat: no-repeat;
-        height: 100vh;
+        height: 90vh;
         position: relative;
         width: 100vw;
         margin-top: 0em;
@@ -93,7 +93,7 @@
     .loginbg{
         background-size: cover;
         background-image: url(./Loginpic.jpg);
-        height: 100vh;
+        height: 90vh;
         width: 100vw;
         margin-top: 0em;
     }
@@ -101,6 +101,15 @@
         background-size: cover;
         background-image: url(./sign.jpg);
         height: 100%;
+        width: 100vw;
+        margin-top: 0;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .feedback{
+        background-size: cover;
+        background-image: url(./girl.jpg);
+        height: 90vh;
         width: 100vw;
         margin-top: 0;
         background-repeat: no-repeat;

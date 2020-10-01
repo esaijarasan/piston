@@ -88,10 +88,7 @@ const style = {
       e.preventDefault();
 
       if(this.state.contactno && this.state.problem && this.state.vehicle){
-        this.setState({
-          successful:true,
-          message:"success"
-        })
+        this.props.history.push("/GeoLocation");
       } 
       else {
         this.setState({
@@ -126,82 +123,89 @@ const style = {
                         
                         <Grid item xs={9}>
                         <Button href="/Home"  variant="contained"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>HOME</Button>
-
                         </Grid>
 
                         <Grid item xs={2}>
-                        <Button  variant="contained"  href="/Profile"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>Profile</Button>
+                          <Button  variant="contained"  href="/Profile"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>Profile</Button>
                         </Grid>
                         <Grid item xs={1} >
-                        <Button  variant="contained"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>Logout</Button>
+                          <Button  variant="contained"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>Logout</Button>
                         </Grid>
                     </Toolbar>
                 </AppBar>
             </div>
 
            
-            <Paper style={style.paper}>
-                   <form style={style.root} noValidate autoComplete="off" >
-                   <Input required id="standard-required" value={this.contactno} onChange={this.handleContactnoChange} label="Required" placeholder="Enter Your Contact Number" inputProps={{ 'aria-label': 'description' }} style={{color:"dark black"}}/>
+      <Paper style={style.paper}>
+      <form style={style.root} noValidate autoComplete="off" >
 
+            <Input required
+             id="standard-required" 
+             value={this.contactno} 
+             onChange={this.handleContactnoChange} 
+             label="Required" 
+             placeholder="Enter Your Contact Number" 
+             inputProps={{ 'aria-label': 'description' }} 
+             style={{color:"dark black"}}
+             />
+
+            <FormControl component="fieldset">
+                <FormLabel component="object"style={{color:"darkcyan" }}><b>choose Your Problem</b></FormLabel>
                 
+                <RadioGroup aria-label= "Choose your problem" name="problem" value={this.problem} onChange={this.handleProblemChange}>
+                  <FormControlLabel value="NeedFuel" control={<Radio />} label="Need Fuel" />
+                  <FormControlLabel value="Flattyre" control={<Radio />} label="Flat Tire" />
+                  <FormControlLabel value="others" control={<Radio />} label="Others" />
+                </RadioGroup>
+            </FormControl>
+            <br/><br/>  
 
 
+            <FormControl component="fieldset">
+                <FormLabel component="object"style={{color:"darkcyan" }}><b>Choose Your vehicle</b></FormLabel>
+                <RadioGroup aria-label= "choose Your vehicle" name="problem" value={this.vehicle} onChange={this.handleVehicleChange}>
+                  <FormControlLabel value="Motor Bike" control={<Radio />} label="Motor Bike" />
+                  <FormControlLabel value="Car" control={<Radio />} label="Car" />
+                  <FormControlLabel value="Three Wheeller" control={<Radio />} label="Three Wheeller" />
+                  <FormControlLabel value="Van"  control={<Radio />} label="Van" />
+                </RadioGroup>
+           </FormControl>
 
-                   <FormControl component="fieldset">
-      <FormLabel component="object"style={{color:"darkcyan" }}><b>choose Your Problem</b></FormLabel>
-      
-      <RadioGroup aria-label= "Choose your problem" name="problem" value={this.problem} onChange={this.handleProblemChange}>
-        <FormControlLabel value="NeedFuel" control={<Radio />} label="Need Fuel" />
-        <FormControlLabel value="Flattyre" control={<Radio />} label="Flat Tire" />
-        <FormControlLabel value="others" control={<Radio />} label="Others" />
-      </RadioGroup>
-    </FormControl>
-    <br/><br/>  
-
-    {/* <form className={classes.root} noValidate autoComplete="off"> */}
-
-                
-
-
-
-                   <FormControl component="fieldset">
-      <FormLabel component="object"style={{color:"darkcyan" }}><b>Choose Your vehicle</b></FormLabel>
-      <RadioGroup aria-label= "choose Your vehicle" name="problem" value={this.vehicle} onChange={this.handleVehicleChange}>
-        <FormControlLabel value="Motor Bike" control={<Radio />} label="Motor Bike" />
-        <FormControlLabel value="Car" control={<Radio />} label="Car" />
-        <FormControlLabel value="Three Wheeller" control={<Radio />} label="Three Wheeller" />
-        <FormControlLabel value="Van"  control={<Radio />} label="Van" />
-      </RadioGroup>
-    </FormControl>
+            <br/>
+                <Button
+                href="/GeoLocation"
+                variant="contained"
+                color="primary"
+                type="submit"
+                size="large"
+                startIcon={<SaveIcon />}
+                style={{backgroundColor:"goldenrod",color:"black" ,}}
+                onClick={this.handleSubmit} 
+                >
+                NEXT
+                </Button>
 
 
-<br/>
-    <Button
-    href="/GeoLocation"
-        variant="contained"
-        color="primary"
-        type="submit"
-        size="large"
-        // className={classes.button}
-        startIcon={<SaveIcon />}
-     style={{backgroundColor:"goldenrod",color:"black" ,}}
-     onClick={this.handleSubmit} >
-       
-        NEXT
-      </Button>
-      <Button  variant="contained"
-        color="primary" href="/" style={{backgroundColor:"Crimson",color:"gold",marginLeft:0}}><ArrowBackIcon/>Cancel</Button>
+                <Button  
+                variant="contained"
+                color="primary" 
+                href="/" 
+                style={{backgroundColor:"Crimson",color:"gold",marginLeft:0}}
+                >
+                <ArrowBackIcon/>
+                Cancel
+                </Button>
 
-      {/* </form> */}
-<br/>
-        <strong>{this.state.message}</strong>
+
+                <br/>
+
+                <strong>{this.state.message}</strong>
       </form>
       </Paper>
+      
       <br/>
                   
-                    {/* <Footer/> */}
-            </div>);   
+</div>);   
          
 }
 }

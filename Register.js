@@ -112,10 +112,7 @@ e.preventDefault();
 
 if (this.state.username && this.state.email && this.state.password && this.state.usertype && this.state.checked ) {
 console.log(this.state.username + " " + this.state.password + " " + this.state.email)
-this.setState({
-successful: true,
-message: "Registered successfully"
-})
+this.props.history.push("/MainPage")
 } else {
 this.setState({
 successful: false,
@@ -138,10 +135,10 @@ return(
                   </Typography>
                   
                   <Grid item xs={10}>
-                  <Button variant="outlined" color="inherit" href="/sos" style={{color:"gold",backgroundColor:"black",borderRadius:15}}>Emergency Contact</Button>
+                    <Button variant="outlined" color="inherit" href="/sos" style={{color:"gold",backgroundColor:"black",borderRadius:15}}>Emergency Contact</Button>
                   </Grid>
                   <Grid item xs={2}>
-                  <Button variant="outlined" color="inherit" href="/Admin" style={{color:"gold",backgroundColor:"black",borderRadius:15}}>Contact us</Button>
+                    <Button variant="outlined" color="inherit" href="/Admin" style={{color:"gold",backgroundColor:"black",borderRadius:15}}>Contact us</Button>
                   </Grid>
               </Toolbar>
           </AppBar>
