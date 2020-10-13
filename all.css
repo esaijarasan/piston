@@ -115,3 +115,38 @@
         background-repeat: no-repeat;
         position: relative;
     }
+    .servicephome{
+        background-size: cover;
+        background-image: url("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        height: 90vh;
+        width: auto;
+        margin-top: 0em;
+    }
+    .feedbackSS{
+        background-size: cover;
+        background-image:  url(./car1.jpg);
+        height: 90vh;
+        width: auto;
+        margin-top: 0em;
+    }
+    .historySS{
+        background-size: cover;
+        background-image:  url(./car1.jpg);
+        height: 90vh;
+        width: auto;
+        margin-top: 0em;
+    }
+    .messages55{
+        background-size: cover;
+        background-image:  url(./car1.jpg);
+        height: 90vh;
+        width: auto;
+        margin-top: 0em;
+    }
+    .provide{
+        background-size: cover;
+        background-image:  url(./provide.jpg);
+        height: 90vh;
+        width: auto;
+        margin-top: 0em;
+    }

@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import img from "/home/ukistu08/project_piston/src/components/pngtree-vintage-motorcycle-print-with-skull-in-motorcycle-helmet-and-crossed-pistons-png-image_1043340.jpg";
+// import img from "/home/ukistu08/project_piston/src/components/pngtree-vintage-motorcycle-print-with-skull-in-motorcycle-helmet-and-crossed-pistons-png-image_1043340.jpg";
 import TextField from '@material-ui/core/TextField';
 
 

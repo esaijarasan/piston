@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
-import { Paper, TextField, Button, Card, CardMedia, Typography, AppBar, Toolbar, Grid } from '@material-ui/core'
+import { Paper, TextField, Button, Card, CardMedia, Typography, AppBar, Toolbar, Grid, FormControl } from '@material-ui/core'
 import pic from './contactuspic.jpg';
 import BusinessRoundedIcon from '@material-ui/icons/BusinessRounded';
 import PhoneRoundedIcon from '@material-ui/icons/PhoneRounded';
 import EmailRoundedIcon from '@material-ui/icons/EmailRounded';
+import contactUsService from '../service/contactUsService';
+import { Alert, AlertTitle } from '@material-ui/lab';
+import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 const style={
 textf:{
@@ -47,6 +50,79 @@ padding:20
 }
 
 export default class ContactUs extends Component{
+    constructor(props){
+        super(props);
+        this.state ={
+            //date: '',
+            name: "",
+            email: "",
+            messages: '',
+           
+        }
+    }
+    componentDidMount() {
+        // this.FeedBckList();
+    }
+
+    
+
+    addmessage = () => {
+        window.localStorage.removeItem("id");
+        this.props.history.push('/ContactUs');
+    }
+
+
+    saveMessage = (event) => {
+        event.preventDefault();
+        let messag = {
+            //date: this.state.date, 
+            name: this.state.name, 
+            email: this.state.email, 
+            messages: this.state.messages, 
+            };
+            contactUsService.saveMessage(messag)
+            .then(res => {
+                this.setState({message : 'your message sent Successfuly.'});
+                this.props.history.push('/ContactUs');
+                
+            });
+    }
+    onChangename = (event)=>{
+        this.setState({
+            name:event.target.value,
+        });
+    }
+
+    onChangeemail =(event)=>{
+        this.setState({
+            email:event.target.value
+        });
+    }
+
+    onChangemessages =(event)=>{
+        this.setState({
+            messages:event.target.value
+        });
+    }
+  
+
+
+      handleSubmit= (event) => {
+		console.log("hii")
+		event.preventDefault();
+		
+		if (this.state.name && this.state.email && this.state.messages ) {
+			console.log(this.state.name + " " + this.state.email + " " + this.state.messages)
+			// this.props.history.push("/MainPage")
+		} else {
+			this.setState({
+				successful: false,
+				message: "please fill all feilds"
+			})
+		}
+		
+	}
+
 render(){
 return(
 <>
@@ -68,44 +144,91 @@ return(
 
           
       </div>
-
+    
 <div style={style.imagebg}>
 <Card elevation={0} style={{backgroundColor:"transparent"}}>
 <Card elevation={0} style={{marginTop:200,textAlign:"center",color:"red",backgroundColor:"transparent"}}>
 <h1>Lets Have a Conversation</h1>
+
+{this.state.message&&(
+    <Alert style={{marginLeft:1200,color:"green"}} severity="success">
+        <AlertTitle><b>Success</b></AlertTitle>
+        <strong>{this.state.message}</strong>
+    </Alert>
+)}
 </Card>
 </Card>
+
 
 </div>
-<Paper style={style.paper}>
+
+<Paper  style={style.paper}>
 <Card style={style.messagecard}>
-<form>
-<h1><b>Get in Touch </b></h1>
-<p style={{color:"green"}}>Please fill out the qiuck form and we will be in touch very soon </p>
+
+
+
+
+           
+
+{/* <form   > */}
+         <h1><b>Get in Touch </b></h1>
+            <p style={{color:"green"}}>Please fill out the qiuck form and we will be in touch very soon </p>
+            <ValidatorForm
+                ref="form"
+                onSubmit={this.saveMessage}
+                onError={errors => console.log(errors)}
+            >
+                <TextValidator
+                    label="Name"
+                    onChange={this.onChangename}
+                    name="name"
+                    value={this.state.name}
+                    validators={['required']}
+                    errorMessages={['this field is required']}
+                />
+
+                <TextValidator
+                    label="Email"
+                    onChange={this.onChangeemail}
+                    name="email"
+                    value={this.state.email}
+                    validators={['required', 'isEmail']}
+                    errorMessages={['this field is required', 'email is not valid']}
+                />
+
+                <TextValidator
+                    label="Message"
+                    onChange={this.onChangemessages}
+                    name="messages"
+                    value={this.state.messages}
+                    validators={['required']}
+                    errorMessages={['this field is required']}
+                />
+
+                <Button type="submit">Submit</Button>
+            </ValidatorForm>
+{/* <FormControl>
+<TextField type="text"
+ required id="outlined-required" label="name" style={style.textf} value={this.state.name} variant="outlined" helperText="Enter Your Name"  onChange={this.onChangename}
+>name</TextField>
+<br/>
 
 <TextField
-variant="standard"
-placeholder="Enter your name"
-style={style.textf}
+ type="email" required id="outlined-required" label="email" style={style.textf} value={this.state.email} variant="outlined" helperText="Enter Your Email"  onChange={this.onChangeemail}
+
 />
 <br/>
 
 <TextField
-variant="standard"
-placeholder="Enter your Email"
-style={style.textf}
-/>
-<br/>
+  id="outlined-required" label="messages" style={style.textf} value={this.state.messages} variant="outlined" helperText="Enter Your messages"  onChange={this.onChangemessages}
 
-<TextField
-variant="standard"
-placeholder="Enter your message"
-style={style.textf}
 /><br/>
 
-<Button variant="outlined" style={style.submitbutton}>Submit</Button>
-</form>
+<Button type="submit" style={style.submitbutton} onSubmit={this.handleSubmit}
+ variant="outlined" onClick={(event) => this.saveMessage(event)}>Submit</Button></FormControl></form> */}
 </Card>
+
+{/* style={style.submitbutton} */}
 
 <Card style={style.card2}>
 <table>

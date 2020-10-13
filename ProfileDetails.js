@@ -6,12 +6,12 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import ChangEpassword from '/home/ukistu08/project_piston/src/components/ChangEpassword.js';
+import ChangEpassword from '/home/ukipc13/Desktop/piston_v1/project_piston/src/components/ChangEpassword.js';
 
 import Fade from '@material-ui/core/Fade';
-import Profileupload from '/home/ukistu08/project_piston/src/components/Profileupload.js';
+import Profileupload from '/home/ukipc13/Desktop/piston_v1/project_piston/src/components/Profileupload.js';
 
-import Terms from '/home/ukistu08/project_piston/src/components/Terms.js';
+import Terms from '/home/ukipc13/Desktop/piston_v1/project_piston/src/components/Terms.js';
 
 import { Alert, AlertTitle } from '@material-ui/lab'
 

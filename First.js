@@ -73,6 +73,11 @@ export default function FirstPage () {
                         </Grid>
 
                         <Grid item xs={2}>
+                        <Button  variant="contained"  href="/feedbacks"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>Feedbacks</Button>
+                        </Grid>
+
+
+                        <Grid item xs={2}>
                         <Button  variant="contained"  href="/History"  style={{backgroundColor:"black",color:"gold",marginLeft:10}}>History</Button>
                         </Grid>
 

@@ -16,6 +16,8 @@ import SaveIcon from '@material-ui/icons/Save';
 import Input from '@material-ui/core/Input';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import './all.css'
+import ApiService from '../service/ApiService';
+import historyService from '../service/historyService';
 
 
 
@@ -55,6 +57,7 @@ const style = {
       super();
 
       this.state = {
+        userId:"",
         contactno:"",
         problem:"",
         vehicle:"",
@@ -62,6 +65,26 @@ const style = {
       };
     }
 
+    addHIstory = () => {
+			window.localStorage.removeItem("id");
+			this.props.history.push('/ChoosePrb');
+		}
+
+    saveHIstory = (event) => {
+			event.preventDefault();
+			let HIstory = {
+				//date: this.state.date, 
+				contactno: this.state.contactno, 
+				problem: this.state.problem, 
+				vehicle: this.state.vehicle, 
+				userId: this.state.userId, 
+				message: this.state.message};
+			historyService.saveHIstory(HIstory)
+				.then(res => {
+					this.setState({message : 'problem added successfully.'});
+					this.props.history.push('/ChoosePrb');
+				});
+		}
     
 
     handleProblemChange=(e) => {
@@ -84,7 +107,21 @@ const style = {
       });
     }
 
+
+    componentDidMount(){
+			this.reloadHistoryList();
+		  }
+		
+		  reloadHistoryList = () => {
+			historyService.getAllHistory()
+			   .then((Response) => {
+				 this.setState({historyArr:Response.data})
+			   })
+		  }
+
+
     handleSubmit = (e) => {
+      console.log("hii")
       e.preventDefault();
 
       if(this.state.contactno && this.state.problem && this.state.vehicle){
@@ -173,6 +210,7 @@ const style = {
 
             <br/>
                 <Button
+                onClick={(event) => this.saveHIstory(event)}
                 href="/GeoLocation"
                 variant="contained"
                 color="primary"

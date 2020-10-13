@@ -7,10 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { ListItemAvatar, Avatar } from '@material-ui/core';
-import Terms from "/home/ukistu08/project_piston/src/components/Terms.js";
+import Terms from "/home/ukipc13/Desktop/piston_v1/project_piston/src/components/Terms.js";
 import {loadStripe} from '@stripe/stripe-js';
 import { Elements} from '@stripe/react-stripe-js';
-import CheckoutForm from '/home/ukistu08/project_piston/src/components/stripe.js';
 import {AppBar, Button,Toolbar, Grid,} from '@material-ui/core'
 
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
@@ -19,6 +18,7 @@ import Profileuser from './Profileuser';
 import FooterXXX from './Footer'
 // import sea from '/home/ukistu08/project_piston/src/components/sea.jpg'
 import { red } from '@material-ui/core/colors';
+import CheckoutForm from './stripe';
 
 const mystyle = {
   fontFamily: "Arial",

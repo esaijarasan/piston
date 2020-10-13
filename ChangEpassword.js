@@ -16,7 +16,7 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 
 import AppBar from '@material-ui/core/AppBar';
 import Divider from '@material-ui/core/Divider';
-import ima from '/home/ukistu08/project_piston/src/components/girl.jpg';
+import ima from '/home/ukipc13/Desktop/piston_v1/project_piston/src/components/girl.jpg';
 const useStyles = makeStyles((theme)=>({
     container: {
         display: 'flex',
